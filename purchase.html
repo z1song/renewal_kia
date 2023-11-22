@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>jiwon</title>
+    <link rel="stylesheet" href="purchase.css">
+    <link rel="stylesheet" href="header-nav-footer.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div w3-include-html="navigation.html"></div>
+
+    <main>
+        <h1 class="main-title">The Kia Ray EV</h1>
+
+        <p>작지만 가장 넓게 쓰이는, <br>생활 EV의 시작</p>
+
+        <h1>27,750,000 <span>원부터</span></h1>
+
+        <small>(서울시 기준 보조금 수령시 2,128만원부터 / 4인승 승용 라이트 기준)</small>
+
+        <p>전기차 유의 사항<img src="images/common/icon_info_outline.svg"></p>
+
+        <div>
+            <div>
+                <img src="images/purchase/usp_fuel_effeciency.svg">
+
+                <small>205km 1회충전 최대주행<br>(도심 233km)</small>
+            </div>
+
+            <div>
+                <img src="images/purchase/usp_maximum_power.svg">
+
+                <small>64.3kW 최고출력</small>
+            </div>
+
+            <div>
+                <img src="images/purchase/usp_ev_guarantee.svg">
+
+                <small>0년/20만km 고전압 배터리</small>
+            </div>
+        </div>
+
+        <div class="thumb" style="overflow:scroll; overflow-y:hidden;">
+            <img onclick="changeBg(this)" src="images/purchase/main_pc.jpg" alt="">
+            <img onclick="changeBg(this)" src="images/purchase/main_thumb2.jpg" alt="">
+            <img onclick="changeBg(this)" src="images/purchase/main_thumb3.jpg" alt="">
+            <img onclick="changeBg(this)" src="images/purchase/main_thumb4.jpg" alt="">
+            <img onclick="changeBg(this)" src="images/purchase/main_thumb5.jpg" alt="">
+        </div>
+
+        <div class="scroll-downs">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+
+        <script>
+            function changeBg(img) {
+                var src = img.src;
+                document.querySelector('main').style.backgroundImage = 'url(' + src + ')';
+            }
+        </script>
+    </main>
+
+
+    <article class="tab-estimate">
+        <h1>Quote</h1>
+
+        <div>
+            <div class="space-betweens">
+                <button class="tabmenu-button tablink tabmenu-color" onclick="openCity(event, 'Trim')">Trim</button>
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'Colors')">Color</button>
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'Options')">Options</button>
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'Accessoriesz')">Accessories</button>
+            </div>
+
+            <div class="margin-tops centers">
+
+                <div id="Trim" class="city">
+                    <h2>트림 선택</h2>
+
+                    <div>
+                        <p>바디 타입</p>
+                        <div>
+                            <input type="radio" name="bodytype" id="sy" checked><label for="sy">승용</label>
+                            <input type="radio" name="bodytype" id="ben"><label for="ben">벤</label>
+                        </div>
+                        <p>엔진</p>
+
+                        <div>
+                            <input type="radio" name="enginetype" id="ev" checked><label>전기차</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <input type="radio" name="at" id="lightat" checked><label for="lightat">
+                                <p>라이트 A/T 2WD</p>
+                                <p>27,750,000원</p>
+                            </label>
+
+                        </div>
+
+                        <div>
+                            <input type="radio" name="at" id="airat"><label for="airat">
+                                <p>에어 A/T 2WD</p>
+                                <p>29,550,000원</p>
+                            </label>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Colors" class="city" style="display:none">
+                    <h2>컬러 선택</h2>
+
+                    <div>
+                        <p>외장</p>
+
+                        <p id="colorname">클리어 화이트</p>
+
+                        <div>
+                            <input type="radio" name="colorpick" id="cw" checked
+                                onclick="changeColorName('클리어 화이트')"><label for="cw">
+
+                            </label>
+                            <input type="radio" name="colorpick" id="mb" onclick="changeColorName('밀키 베이지')"><label
+                                for="mb">
+
+                            </label>
+                            <input type="radio" name="colorpick" id="ag" onclick="changeColorName('아스트로 그레이')"><label
+                                for="ag">
+
+                            </label>
+                            <input type="radio" name="colorpick" id="sb" onclick="changeColorName('스모크 블루')"><label
+                                for="sb">
+
+                            </label>
+                            <input type="radio" name="colorpick" id="am" onclick="changeColorName('아쿠아 민트')"><label
+                                for="am">
+
+                            </label>
+                            <input type="radio" name="colorpick" id="abp" onclick="changeColorName('오로라 블랙 펄')"><label
+                                for="abp">
+
+                            </label>
+                        </div>
+
+                        <script>
+                            function changeColorName(color) {
+                                document.getElementById('colorname').textContent = color;
+                            }
+                        </script>
+
+                        <p>내장</p>
+
+                        <p id="colornames">라이트 그레이</p>
+
+                        <div>
+                            <input type="radio" name="innercolorpick" id="lg" checked
+                                onclick="changeColorNames('라이트 그레이')"><label for="lg"></label>
+                            <input type="radio" name="innercolorpick" id="bl" onclick="changeColorNames('블랙')"><label
+                                for="bl"></label>
+                        </div>
+
+                        <script>
+                            function changeColorNames(colors) {
+                                document.getElementById('colornames').textContent = colors;
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div id="Options" class="city" style="display:none">
+                    <h2>옵션 선택</h2>
+
+                    <div id="css_tabs">
+                        <input id="tab1" type="radio" name="tab" checked="checked" />
+
+                        <input id="tab2" type="radio" name="tab" />
+
+                        <label for="tab1">선택 옵션</label>
+
+                        <label for="tab2">기본 포함 옵션</label>
+
+                        <div class="tab1_content">
+                            <p>상세 옵션</p>
+
+                            <ul>
+                                <li>
+                                    <p>컴포트 Ⅰ</p>
+                                    <p>700,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check1">
+                                        <label for="check1"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>컴포트 Ⅱ</p>
+                                    <p>450,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check2">
+                                        <label for="check2"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>드라이브 와이즈 Ⅰ</p>
+                                    <p>650,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check3">
+                                        <label for="check3"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>드라이브 와이즈 Ⅱ</p>
+                                    <p>300,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>하이패스 자동 결제 시스템</p>
+                                    <p>250,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check5">
+                                        <label for="check5"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p>스타일(라이트)</p>
+                                    <p>600,000원</p>
+
+                                    <div>
+                                        <input type="checkbox" id="check6">
+                                        <label for="check6"></label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab2_content">
+                            <div>
+                                <p>파워 트레인</p>
+
+                                <ul>
+                                    <li>
+                                        <p>35.2kWh 리튬인산철 배터리</p>
+                                    </li>
+                                    <li>
+                                        <p>회생제동 브레이크 시스템</p>
+                                    </li>
+                                    <li>
+                                        <p>속도감응형 전동식 파워스티어링(MDPS)</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>안전</p>
+
+                                <ul>
+                                    <li>
+                                        <p>개별 타이어 공기압 경보 시스템</p>
+                                    </li>
+                                    <li>
+                                        <p>유아용 시트 고정 장치</p>
+                                    </li>
+                                    <li>
+                                        <p>전/후륜 디스크 브레이크</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>외장</p>
+
+                                <ul>
+                                    <li>
+                                        <p>175/60 R14 타이어/스틸 휠</p>
+                                    </li>
+                                    <li>
+                                        <p>풀사이즈 휠커버</p>
+                                    </li>
+                                    <li>
+                                        <p>바디칼라 아웃사이드 미러(전동접이, 전동조절, 열선, 락폴딩)</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>내장</p>
+
+                                <ul>
+                                    <li>
+                                        <p>블랙 인테리어</p>
+                                    </li>
+                                    <li>
+                                        <p>슈퍼비전 클러스터(10.25인치 칼라 TFT LCD)</p>
+                                    </li>
+                                    <li>
+                                        <p>맵램프</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>시트</p>
+
+                                <ul>
+                                    <li>
+                                        <p>직물시트</p>
+                                    </li>
+                                    <li>
+                                        <p>뒷좌석 벤치폴딩시트</p>
+                                    </li>
+                                    <li>
+                                        <p>앞좌석 슬라이딩 헤드레스트</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>편의</p>
+
+                                <ul>
+                                    <li>
+                                        <p>버튼시동 스마트키 시스템(원격시동 포함)</p>
+                                    </li>
+                                    <li>
+                                        <p>컬럼 타입 전자식 변속 레버</p>
+                                    </li>
+                                    <li>
+                                        <p>회생제동 컨트롤 패들 쉬프트</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p>인포테인먼트</p>
+
+                                <ul>
+                                    <li>
+                                        <p>8인치 내비게이션(기아 커넥트, 폰 프로젝션, 기아 카페이)</p>
+                                    </li>
+                                    <li>
+                                        <p>내비게이션 무선 업데이트</p>
+                                    </li>
+                                    <li>
+                                        <p>6스피커</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button>자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Accessoriesz" class="city" style="display:none">
+                    <h2>기아 순정 액세서리 선택</h2>
+
+                    <div>
+                        <img src="images/common/icon_info_outline.svg">
+                        <p>선택 가능한 액세서리가 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button>견적 완료</button>
+        </div>
+
+        <script>
+            function openCity(evt, cityName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" tabmenu-color", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " tabmenu-color";
+            }
+
+        </script>
+    </article>
+
+    <article class="in-out">
+        <h1>Design</h1>
+
+        <div>
+            <img src="images/purchase/design_ex.jpg">
+
+            <div>
+                <small>외장</small>
+
+                <h2>모던하고 심플한 디자인</h2>
+
+                <p>모던하고 견고한 디자인에 심플함을 더한 Ray EV만의 새로운 매력을 선보입니다.</p>
+
+                <hr>
+            </div>
+        </div>
+
+
+        <div>
+            <img src="images/purchase/design_in.jpg">
+
+            <div>
+                <small>내장</small>
+
+                <h2>경형 최대 하이테크 공간</h2>
+
+                <p>※ 본 사진과 설명은 참고용으로, 실제와 다를 수 있습니다.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="accessories">
+        <div>
+            <p>기아 순정 액세서리</p>
+
+            <h1>Kia Genuine Accessories</h1>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <div></div>
+
+                    <h3>비상용 완속 충전 케이블(220V ICCB)</h3>
+
+                    <small>*애프터마켓 상품 판매처 : 기아 카앤라이프몰</small>
+                </div>
+
+                <div>
+                    <div></div>
+
+                    <h3>선바이저 선글라스 케이스</h3>
+
+                    <small>*애프터마켓 상품 판매처 : 기아 카앤라이프몰</small>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div></div>
+
+                    <h3>시트백 오거나이저(1열)</h3>
+
+                    <small>*애프터마켓 상품 판매처 : 기아 카앤라이프몰</small>
+                </div>
+
+                <div>
+                    <div></div>
+
+                    <h3>시트백 오거나이저(2열)</h3>
+
+                    <small>*애프터마켓 상품 판매처 : 기아 카앤라이프몰</small>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="four-buttons">
+        <div>
+            <div>
+                <div>
+                    <img src="images/navigation/quote_icon.svg">
+                    <p>Give a Quote</p>
+
+                    <p>Quote</p>
+                </div>
+
+                <div>
+                    <img src="images/navigation/drive_icon.svg">
+                    <p>Apply for a test drive</p>
+
+                    <p>Test Drive</p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/navigation/catalog_icon.svg">
+                    <p>Catalog / Price list</p>
+
+                    <p>Catalog</p>
+                </div>
+
+                <div>
+                    <img src="images/navigation/benefits_icon.svg">
+                    <p>Purchase benefits of the month</p>
+
+                    <p>Benefits</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

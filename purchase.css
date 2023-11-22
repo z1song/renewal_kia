@@ -1,0 +1,918 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face {
+    font-family: 'YES24';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YES24.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0px solid silver;
+    font-family: 'Pretendard-Regular';
+    word-break: keep-all;
+}
+
+body {
+    color: black;
+    overflow-x: hidden;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Barlow', 'SUITE-Regular';
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+button {
+    width: 120px;
+    margin-bottom: 8px;
+    padding: 10px;
+    background: #030f16;
+    font-size: 0.9rem;
+    border: none;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #092e43;
+    box-shadow: 0px 0px 0px 2px #030f16 inset;
+}
+
+article img {
+    width: 100%;
+}
+
+article {
+    padding: 140px 5%;
+}
+
+.main-title {
+    font-size: 2.3rem;
+}
+
+/* form defualt */
+select {
+    cursor: pointer;
+    appearance: none;
+    background: url("images/common/icon_select_down-arrow.png") no-repeat 95% 50%;
+    background-size: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    resize: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 5px;
+}
+
+input[type="range"] {
+    overflow: hidden;
+    height: 20px;
+    appearance: none;
+    margin: 10px 0;
+    background: transparent;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 100%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #092e43;
+    box-shadow: 1px 1px 7px #7f8589;
+    cursor: pointer;
+    box-shadow: -100vw 0 0 100vw #7f8589;
+}
+
+/* start */
+main {
+    width: 100%;
+    height: 680px;
+    background-color: #092e43;
+    padding: 5%;
+    background: url("images/purchase/main_mob.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+main> :nth-child(1) {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+main> :nth-child(2) {
+    margin-bottom: 100px;
+}
+
+main> :nth-child(3)>span {
+    font-size: 1rem;
+}
+
+main> :nth-child(5) {
+    align-items: center;
+    display: flex;
+    margin: 10px 0;
+}
+
+main> :nth-child(5)>img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+main> :nth-child(6) {
+    display: flex;
+}
+
+main> :nth-child(6)>div {
+    width: 100px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+main> :nth-child(6)>div>img {
+    width: 50px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+main> :nth-child(6)>div>small {
+    color: white;
+}
+
+.scroll-downs {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin: auto;
+    width: 34px;
+    height: 55px;
+    display: none;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+.thumb {
+    width: 350px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.thumb img {
+    padding: 0;
+    width: 90%;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.3s;
+    border: 4px solid transparent;
+}
+
+.thumb img:hover {
+    border: 4px solid #96B2BC;
+}
+
+.thumb::-webkit-scrollbar {
+    width: 5px;
+}
+
+.thumb::-webkit-scrollbar-thumb {
+    background: #092e43;
+    border-radius: 10px;
+    border: 1px solid #7f8589;
+}
+
+.thumb::-webkit-scrollbar-track {
+    background: #7f8589;
+    border-radius: 10px;
+}
+
+.tab-estimate {
+    background-color: #030f16;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.tab-estimate> :nth-child(1) {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.tabmenu-button {
+    width: 24%;
+}
+
+.tabmenu-color {
+    background: #7f8589;
+    color: black;
+}
+
+.city {
+    background-color: #eee;
+    padding: 5%;
+}
+
+#Trim> :nth-child(2)>p {
+    margin: 10px 0;
+}
+
+#Trim> :nth-child(2)>div>input[type=radio] {
+    display: none;
+}
+
+#Trim> :nth-child(2)>div>input[type=radio]+label {
+    display: inline-block;
+    cursor: pointer;
+    width: 49%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+#Trim> :nth-child(2)>div>input[type=radio]:checked+label {
+    background-color: #030f16;
+    color: #7f8589;
+}
+
+#Trim> :nth-child(2)>div>input[type=radio]+label {
+    background-color: #7f8589;
+    color: #030f16;
+}
+
+#Trim> :nth-child(3) {
+    margin-top: 20px;
+}
+
+#Trim> :nth-child(3)>div {
+    margin-bottom: 10px;
+}
+
+#Trim> :nth-child(3)>div>input[type=radio] {
+    display: none;
+}
+
+#Trim> :nth-child(3)>div>input[type=radio]+label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #7f8589;
+    margin: 8px 0 8px;
+}
+
+#Trim> :nth-child(3)>div>input[type=radio]:checked+label {
+    border: 1px solid black;
+    box-shadow: 0px 2px 2px 2px #ccc;
+}
+
+#Trim> :nth-child(3)>div>input[type=radio]+label> :nth-child(2) {
+    color: #666;
+}
+
+#Colors>div> :nth-child(3) {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Colors>div> :nth-child(7) {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Colors> :nth-child(2)> :nth-child(1),
+#Colors> :nth-child(2)> :nth-child(5) {
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+#Colors> :nth-child(2)> :nth-child(2),
+#Colors> :nth-child(2)> :nth-child(6) {
+    margin-bottom: 10px;
+}
+
+#Colors>div>div>input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+
+#Colors>div>div>input[type="radio"]+label {
+    display: inline-block;
+    outline: 1px solid black;
+    border-radius: 50%;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#Colors>div>div>input[type="radio"]:checked+label::after {
+    content: "✓";
+}
+
+#Colors>div>div>#mb+label {
+    background-color: #c5c0ab;
+}
+
+#Colors>div>div>#ag+label {
+    background-color: #474846;
+    color: white;
+}
+
+#Colors>div>div>#sb+label {
+    background-color: #131c34;
+    color: white;
+}
+
+#Colors>div>div>#am+label {
+    background-color: #83a4a1;
+}
+
+#Colors>div>div>#am+label {
+    background-color: #83a4a1;
+}
+
+#Colors>div>div>#abp+label {
+    background-color: #091113;
+    color: white;
+}
+
+#Colors>div>div>#lg+label {
+    background-color: #6f7470;
+}
+
+#Colors>div>div>#bl+label {
+    background-color: black;
+    color: white;
+}
+
+/* 탭 선택 시 표시할 요소(div) 정의(1번 탭 선택 시 첫 번째 div 요소 표시) */
+#css_tabs input:nth-of-type(1),
+#css_tabs input:nth-of-type(1)~div:nth-of-type(1),
+#css_tabs input:nth-of-type(2),
+#css_tabs input:nth-of-type(2)~div:nth-of-type(2),
+#css_tabs input:nth-of-type(3),
+#css_tabs input:nth-of-type(3)~div:nth-of-type(3) {
+    display: none
+}
+
+#css_tabs input:nth-of-type(1):checked~div:nth-of-type(1),
+#css_tabs input:nth-of-type(2):checked~div:nth-of-type(2),
+#css_tabs input:nth-of-type(3):checked~div:nth-of-type(3) {
+    display: block
+}
+
+/* 라벨 기본 스타일 지정 */
+
+#css_tabs>label {
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    width: 49%;
+    background: #eee;
+}
+
+#css_tabs>label:hover {
+    cursor: pointer
+}
+
+
+/* 선택된 라벨, 커서를 올린 라벨 스타일 지정 */
+#css_tabs input:nth-of-type(1):checked~label:nth-of-type(1),
+#css_tabs>label[for=tab1]:hover,
+#css_tabs input:nth-of-type(2):checked~label:nth-of-type(2),
+#css_tabs>label[for=tab2]:hover {
+    background: #030f16;
+    color: #fff
+}
+
+/* 실제 내용이 담긴 div 요소 스타일 지정 */
+#css_tabs .tab1_content,
+#css_tabs .tab2_content,
+#css_tabs .tab3_content {
+    border: 1px solid #ddd;
+    height: 100%
+}
+
+#Options>div {
+    margin-top: 20px;
+}
+
+#Options>div>div {
+    margin-top: 10px;
+}
+
+#Options>div>div>ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 5%;
+}
+
+#Options>div>:nth-child(2)>ul {
+    padding: 0;
+}
+
+#Options>div>div>ul>li {
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#Options>div>div>ul>li> :nth-child(2) {
+    color: #6f7470;
+}
+
+#Options>div>div>ul>li>div {
+    position: absolute;
+    right: 5%;
+    top: 0;
+}
+
+#Options>div>div>ul>li>div>input[type="checkbox"] {
+    display: none;
+}
+
+#Options>div>div>ul>li>div>input[type="checkbox"]+label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+#Options>div>div>ul>li>div>input[type="checkbox"]:checked+label::after {
+    content: '✔';
+    width: 28px;
+    height: 26px;
+    padding-top: 2px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+#Options> :nth-child(2)> :nth-child(6) {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#Options> :nth-child(2)> :nth-child(6)::-webkit-scrollbar {
+    width: 10px;
+}
+
+#Options> :nth-child(2)> :nth-child(6)::-webkit-scrollbar-thumb {
+    background: #092e43;
+    border-radius: 10px;
+    border: 1px solid #7f8589;
+}
+
+#Options> :nth-child(2)> :nth-child(6)::-webkit-scrollbar-track {
+    background: #7f8589;
+    border-radius: 10px;
+}
+
+#Options> :nth-child(2)> :nth-child(6)>div>ul {
+    list-style: none;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 0 5%;
+}
+
+
+#Options>div>div>p {
+    font-weight: bold;
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+#Options>div>div> :nth-child(1)> :nth-child(1) {
+    padding: 5%;
+    padding-bottom: 0;
+}
+
+#Options>div>div>div>p {
+    font-weight: bold;
+    margin-bottom: 4px;
+    padding: 0 5%;
+}
+
+#Options> :nth-child(2)> :nth-child(6)>button {
+    cursor: default;
+    margin: 5%;
+}
+
+#Accessoriesz>div {
+    text-align: center;
+    background-color: #ddd;
+    padding: 80px;
+    margin-top: 10px;
+}
+
+#Accessoriesz>div>img {
+    width: 40px;
+}
+
+.tab-estimate> :nth-child(3) {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 100px;
+}
+
+.tab-estimate> :nth-child(3)>button {
+    font-size: 1rem;
+    background-color: #092e43;
+    cursor: default;
+}
+
+.in-out {
+    padding: 100px 0;
+    background-color: #eee;
+}
+
+.in-out> :nth-child(1) {
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.in-out>div {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.in-out>div>img {
+    width: 100%;
+}
+
+.in-out>div>div {
+    padding: 5%;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+}
+
+.in-out>div>div>small {
+    color: #092e43;
+}
+
+.in-out>div>div>h2 {
+    margin: 10px 0 20px;
+}
+
+.in-out>div>div>hr {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    height: 1px;
+    border: none;
+    background-color: #ccc;
+    display: none;
+}
+
+.accessories> :nth-child(1) {
+    margin-bottom: 50px;
+}
+
+.accessories> :nth-child(2)>div {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accessories> :nth-child(2)>div>div {
+    width: 49%;
+}
+
+.accessories> :nth-child(2)>div>div> :nth-child(1) {
+    height: 300px;
+    background: url("images/purchase/acc1.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.accessories> :nth-child(2)>div> :nth-child(2)> :nth-child(1) {
+    background: url("images/purchase/acc2.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.accessories> :nth-child(2)> :nth-child(2)> :nth-child(1)> :nth-child(1) {
+    background: url("images/purchase/acc3.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.accessories> :nth-child(2)> :nth-child(2)> :nth-child(2)> :nth-child(1) {
+    background: url("images/purchase/acc4.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.accessories> :nth-child(2)>div>div>h3 {
+    margin-top: 20px;
+    height: 60px;
+}
+
+.four-buttons {
+    padding-top: 0;
+}
+
+.four-buttons>div {
+    display: flex;
+}
+
+.four-buttons>div>div {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.four-buttons>div>div>div {
+    background-color: #7f8589;
+    padding: 10px;
+    transition: 0.3s;
+    color: white;
+    display: flex;
+    cursor: default;
+}
+
+.four-buttons>div>div>div>img {
+    width: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    filter: brightness(100);
+}
+
+.four-buttons>div>div>div>p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.four-buttons>div>div>div> :nth-child(2) {
+    display: none;
+}
+
+/* laptop start */
+@media screen and (min-width: 800px) {
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    article> :nth-child(1) {
+        text-align: center;
+    }
+
+    main {
+        background: url("images/purchase/main_pc.jpg")no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 850px;
+    }
+
+    main> :nth-child(1) {
+        margin-top: 280px;
+    }
+
+    main> :nth-child(2) {
+        margin-bottom: 50px;
+    }
+
+    main> :nth-child(6)>div {
+        width: 150px;
+    }
+
+    .in-out>div {
+        display: flex;
+    }
+
+    .in-out>div> :nth-child(1) {
+        width: 70%;
+    }
+
+    .in-out> :nth-child(3)> :nth-child(1) {
+        order: 2;
+    }
+
+    .in-out> :nth-child(3)> :nth-child(2) {
+        order: 1;
+    }
+
+    .in-out>div>div {
+        height: 100%;
+        padding-bottom: 0;
+    }
+
+    .in-out>div>div hr {
+        display: flex;
+    }
+
+    .accessories> :nth-child(2) {
+        display: flex;
+        width: 100%;
+    }
+
+    .accessories> :nth-child(2)>div {
+        width: 100%;
+    }
+
+    .accessories> :nth-child(2)> :nth-child(1) {
+        margin-right: 1%;
+    }
+
+    .four-buttons {
+        background: url("images/purchase/fourbuttons_bg.jpg") no-repeat;
+        background-position: center;
+        padding-top: 100px;
+    }
+
+    .four-buttons>div>div {
+        width: 100%;
+        display: flex;
+    }
+
+    .four-buttons>div>div>div {
+        width: 50%;
+        padding: 20px 20px 40px 20px;
+        transition: 0.3s;
+        display: block;
+        margin-right: 1%;
+        text-align: left;
+    }
+
+    .four-buttons>div> :nth-child(2)> :nth-child(2) {
+        margin-right: 0;
+    }
+
+    .four-buttons>div>div>div> :nth-child(1) {
+        display: block;
+    }
+
+    .four-buttons>div>div>div> :nth-child(3) {
+        display: none;
+    }
+
+    .four-buttons>div>div>div> :nth-child(2) {
+        display: block;
+    }
+
+
+    @media screen and (min-width: 1000px) {
+        .thumb {
+            width: 640px;
+            height: 130px;
+            position: absolute;
+            bottom: 100px;
+            right: 5%;
+            overflow: hidden;
+            display: flex;
+            padding-bottom: 10px;
+        }
+
+        .scroll-downs {
+            display: flex;
+        }
+
+        .four-buttons>div {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        main> :nth-child(2) {
+            margin-bottom: 100px;
+        }
+
+        .tab-estimate> :nth-child(2) {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+    }
+
+}

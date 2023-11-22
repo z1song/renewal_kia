@@ -1,0 +1,2429 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>jiwon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header-nav-footer.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+
+<body>
+    <div w3-include-html="header.html"></div> 
+
+    <div w3-include-html="navigation.html"></div> 
+
+    <main>
+        <video src="https://worldwide.kia.com/kr/image/video/ev9/premiere/ev9-wp-usp-01-discover-suv-design.mp4"
+            autoplay muted loop></video>            
+    </main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 stats stats-01">
+                <div class="counting" data-count="6400">0</div>
+                <h5>rpm</h5>
+            </div>
+
+            <div class="col-lg-3 stats stats-02">
+                <div class="counting" data-count="45">0</div>
+                <h5>kg·m</h5>
+            </div>
+
+            <div class="col-lg-3 stats stats-03">
+                <div class="counting" data-count="14">0</div>
+                <h5>km/l</h5>
+            </div>
+
+            <div class="col-lg-3 stats stats-04">
+                <div class="counting" data-count="3342">0</div>
+                <h5>cc</h5>
+            </div>
+        </div>
+    </div>
+
+    <script>$('.counting').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+
+        $({
+            countNum: $this.text()
+        }).animate({
+                countNum: countTo
+            },
+
+            {
+                duration: 3000,
+                easing: 'linear',
+                step: function() {
+                    $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                    $this.text(this.countNum);
+                    //alert('finished');
+                }
+
+            });
+    });
+    </script>
+
+    <div class="main-title">
+        <p>Movement inspires ideas</p>
+    </div>
+
+    <div class="scroll-downs">
+        <div class="mousey">
+            <div class="scroller">
+            </div>
+        </div>
+
+        <p>SCROLL DOWN</p>
+    </div>
+
+    <div class="main-under page-start">
+        <img src="images/common/logo_w.svg">
+
+        <h1>Movement that inspires</h1>
+    </div>
+
+    <article class="estimate">
+        <div>
+            <div class="custom-btn btn-4">
+                <img src="images/index/estimate_quote.svg">
+                <p>Give a quote</p>
+            </div>
+
+            <div class="custom-btn btn-4">
+                <img src="images/index/estimate_drive.svg">
+                <p>Test Drive</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="custom-btn btn-4">
+                <img src="images/index/estimate_network.svg">
+                <p>Sales network</p>
+            </div>
+
+            <div class="custom-btn btn-4">
+                <img src="images/index/estimate_benefits.svg">
+                <p>Benefits</p>
+            </div>
+        </div>
+    </article>
+
+
+    <div class="preorder">
+        <div>
+            <div class="count">
+                <div class="co">
+                  D-<span id="days">00</span>
+                </div>
+                <div class="co">
+                  <span id="hours">00</span>
+                  :
+                </div>
+                <div class="co">
+                  <span id="minutes">00</span>
+                  :
+                </div>
+                <div class="co">
+                  <span id="seconds">00</span>
+                </div>
+              </div>
+        </div>
+
+        <h4>"The New Carnival"  Pre Contract</h4>
+
+        <div>
+            <div>
+                <img src="images/index/preorder_banner_mob.jpg">
+
+                <img src="images/index/preorder_banner_pc.jpg">
+            </div>
+            
+            <div>
+                <p>정제된 세련미와 강인함이 어우러진 외관, 입체감을 강화한 실내 디자인</p>
+                <p>신규 파워트레인과 그래비티 트림 추가해 다양한 고객 니즈 충족</p>
+                <p>프리미엄의 존재감을 더욱 확고하게 드러내는 카니발 하이리무진</p>
+            </div>
+        </div>
+
+        <div>
+            <button>사전예약</button>
+        </div>
+
+        <div></div>
+
+        <script>
+            // 파라미터로 지정된 시간을 객체 생성
+          let count = new Date("12 31, 2023 00:00:01").getTime();
+          // 셋인터벌 함수 생성
+          let x = setInterval(function() {
+          // 현재 시간 객체 생성
+          let now = new Date().getTime();
+          // 지정된 시간 마이너스 현재시간 값을 변수 d에 넘김. 즉 디는 남은 시간
+          let d = count - now;
+        
+          let days = Math.floor(d / (1000 * 60 * 60 * 24));
+          let hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          let minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+          let seconds = Math.floor((d % (1000 * 60)) / 1000);
+        
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+        
+          // d가 0보다 작거나 같아지면 setInterval 함수 호출을 취소함
+          // 반복되는 인터벌은 1s로 셋팅
+          if (d <= 0) {
+            clearInterval(x);
+          }
+        }, 1000);
+        
+        // getTime() - https://www.w3schools.com/jsref/jsref_gettime.asp
+        // math.floor - https://www.w3schools.com/jsref/jsref_floor.asp
+        // innerHTML - https://www.w3schools.com/jsref/prop_html_innerhtml.asp
+        // clearInterval - https://www.w3schools.com/jsref/met_win_clearinterval.asp
+        
+          // 1day = 1000ms * 60s * 60m * 24h = 86,400,000ms
+          // 1h= 1000ms * 60s * 60m = 3,600,000ms
+          // 1m = 1000ms * 60s = 60,000ms
+          // 1s = 1000ms
+          </script>
+    </div>
+
+    <article class="best-kia">
+        <div class="title">
+            <h1>Best Kia</h1>
+
+            <p>Car list</p>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <button class="tabmenu-button tablink tabmenu-color" onclick="openBest(event, 'new')">
+                        <p>최근 출시</p>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="tabmenu-button tablink" onclick="openBest(event, 'efficiency')">
+                        <p>연비 효율</p>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="tabmenu-button tablink" onclick="openBest(event, 'space')">
+                        <p>적재 공간</p>
+                    </button>
+                </div>
+                <div>
+                    <button class="tabmenu-button tablink" onclick="openBest(event, 'safety')">
+                        <p>안전성</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="slideshow-container">
+                <div id="new" class="best">
+                    <section>
+                        <div>
+                            <h2>The 2024 K8</h2>
+                            <p>TOP 1</p>
+                        </div>
+
+                        <p>1.6 하이브리드 | 시그니처 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_newk8.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>출시일</p>
+                                <p>2023-10-04</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>180ps / 5,500 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>외장 컬러</p>
+                                <p>오로라 블랙 펄</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (5)</p>
+                                <div>
+                                    <p>컴포트(하이브리드)</p>
+                                    <p>드라이브 와이즈(시그니처)</p>
+                                    <p>전자제어 서스펜션 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>51,210,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>The Kia Ray EV</h2>
+                            <p>TOP 2</p>
+                        </div>
+
+                        <p>EV전기차 | 에어 A/T 2WD</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_rayEV.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>출시일</p>
+                                <p>2023-09-21</p>
+                            </div>
+
+                            <div>
+                                <p>배터리 용량</p>
+                                <p>35.2kWh</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>64 kW / 87 ps</p>
+                            </div>
+
+                            <div>
+                                <p>외장 컬러</p>
+                                <p>스모크 블루</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (3)</p>
+                                <div>
+                                    <p>컴포트 II</p>
+                                    <p>드라이브 와이즈 II</p>
+                                    <p>스타일(에어)</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>30,800,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>The new Sorento</h2>
+                            <p>TOP 3</p>
+                        </div>
+
+                        <p>1.6하이브리드 | 7인승 시그니처 그래비티 4WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_newSorento.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>출시일</p>
+                                <p>2023-08-18</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>180 px / 5,500 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>외장 컬러</p>
+                                <p>볼캐닉 샌드 브라운</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <div>
+                                    <p>컴포트(그래비티)</p>
+                                    <p>HUD + 빌트인 캠 2</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>50,880,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>The 2024 K3</h2>
+                            <p>TOP 4</p>
+                        </div>
+
+                        <p>1.6 가솔린 | 시그니처 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k3.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>출시일</p>
+                                <p>2023-07-19</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>123 px / 6,300 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>외장 컬러</p>
+                                <p>미네랄 블루</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (3)</p>
+                                <div>
+                                    <p>블랙 핏</p>
+                                    <p>KRELL 프리미엄 사운드</p>
+                                    <p>선루프</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>26,460,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>The 2024 K3 GT</h2>
+                            <p>TOP 5</p>
+                        </div>
+
+                        <p>1.6 가솔린 터보 | GT DCT</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k3-gt.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>출시일</p>
+                                <p>2023-07-19</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,591 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>204 px / 6,000 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>외장 컬러</p>
+                                <p>런웨이 레드</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (3)</p>
+                                <div>
+                                    <p>KRELL 프리미엄 사운드</p>
+                                    <p>GT 전용 가죽 시트</p>
+                                    <p>선루프</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>29,580,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="efficiency" class="best" style="display:none">
+                    <section>
+                        <div>
+                            <h2>니로</h2>
+                            <p>TOP 1</p>
+                        </div>
+
+                        <p>1.6 하이브리드 | 트렌디 2WD DCT</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_niro.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>복합 연비</p>
+                                <p>20.8 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>도심 연비</p>
+                                <p>21.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>19.6 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,580 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <div>
+                                    <p>컨비니언스</p>
+                                    <p>내비게이션</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>30,020,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>K5</h2>
+                            <p>TOP 2</p>
+                        </div>
+
+                        <p>2.0 하이브리드 | 트렌디 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k5.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>복합 연비</p>
+                                <p>20.1 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>도심 연비</p>
+                                <p>19.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>고속도로 연비</p>
+                                <p>20.2 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,999 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <p>-</p>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>29,930,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>K8</h2>
+                            <p>TOP 3</p>
+                        </div>
+
+                        <p>1.6 하이브리드 | 시그니처 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k8_efficiency.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>복합 연비</p>
+                                <p>17.1 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>도심 연비</p>
+                                <p>17.2 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>고속도로 연비</p>
+                                <p>16.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (4)</p>
+                                <div>
+                                    <p>드라이브 와이즈(시그니처)</p>
+                                    <p>전자제어 서스펜션</p>
+                                    <p>HUD팩+스마트 커넥트 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>50,270,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>스포티지</h2>
+                            <p>TOP 4</p>
+                        </div>
+
+                        <p>1.6터보하이브리드 | 30th Edition 그린내장4WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_sportage.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>복합 연비</p>
+                                <p>15.2 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>도심 연비</p>
+                                <p>15.4 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>고속도로 연비</p>
+                                <p>14.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <div>
+                                    <p>빌트인 캠(하이브리드)</p>
+                                    <p>모니터링 팩(하이브리드 시그니처)</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>43,900,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>모닝</h2>
+                            <p>TOP 5</p>
+                        </div>
+
+                        <p>1.0 가솔린 | 트렌디 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_morning.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>복합 연비</p>
+                                <p>15.1 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>도심 연비</p>
+                                <p>13.8 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>고속도로 연비</p>
+                                <p>16.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>998 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (4)</p>
+                                <div>
+                                    <p>드라이브 와이즈 I</p>
+                                    <p>드라이브 와이즈 II (트렌디)
+                                    <p>
+                                    <p>버튼시동 PACK 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>15,600,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="space" class="best" style="display:none">
+                    <section>
+                        <div>
+                            <h2>카니발</h2>
+                            <p>TOP 1</p>
+                        </div>
+
+                        <p>3.5 가솔린 | 7인승 시그니처 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_carnival.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>트렁크 용량</p>
+                                <p>1,672 L</p>
+                            </div>
+
+                            <div>
+                                <p>복합 연비</p>
+                                <p>8.9 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>3,470 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>294 ps / 6,400 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (7)</p>
+                                <div>
+                                    <p>듀얼 선루프</p>
+                                    <p>드라이브 와이즈
+                                    <p>
+                                    <p>KRELL 프리미엄 사운드 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>47,780,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>쏘렌토</h2>
+                            <p>TOP 2</p>
+                        </div>
+
+                        <p>1.6 하이브리드 | 5인승 시그니처 그래비티 2WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_sorento.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>트렁크 용량</p>
+                                <p>705 L</p>
+                            </div>
+
+                            <div>
+                                <p>복합 연비</p>
+                                <p>15.7 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>180 ps / 5,500 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (6)</p>
+                                <div>
+                                    <p>컴포트(그래비티)</p>
+                                    <p>드라이브 와이즈
+                                    <p>
+                                    <p>HUD + 빌트인 캠 2 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>51,470,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>스포티지</h2>
+                            <p>TOP 3</p>
+                        </div>
+
+                        <p>1.6 터보 하이브리드 | 시그니처 2WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_sportage_space.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>트렁크 용량</p>
+                                <p>637 L</p>
+                            </div>
+
+                            <div>
+                                <p>복합 연비</p>
+                                <p>16.7 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>180 ps / 5,500 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <div>
+                                    <p>모니터링 팩(하이브리드 시그니처)</p>
+                                    <p>스타일(하이브리드 시그니처)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>40,160,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>모하비</h2>
+                            <p>TOP 4</p>
+                        </div>
+
+                        <p>3.0 디젤 | 5인승 플래티넘 그래비티 4WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_mohave.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>트렁크 용량</p>
+                                <p>580 L</p>
+                            </div>
+
+                            <div>
+                                <p>복합 연비</p>
+                                <p>9.3 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>2,959 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>257 ps / 3,800 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>옵션 (2)</p>
+                                <p>-</p>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>52,020,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>K5</h2>
+                            <p>TOP 5</p>
+                        </div>
+
+                        <p>2.0 하이브리드 | 프레스티지 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k5_space.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>트렁크 용량</p>
+                                <p>510 L</p>
+                            </div>
+
+                            <div>
+                                <p>복합 연비</p>
+                                <p>19.1 km / L</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,999 cc</p>
+                            </div>
+
+                            <div>
+                                <p>최고 출력</p>
+                                <p>152 ps / 6,000 rpm</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(2)</p>
+                                <div>
+                                    <p>드라이브 와이즈(프레스티지)</p>
+                                    <p>10.25인치 내비게이션(하이브리드 프레스티지)</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>33,690,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="safety" class="best" style="display:none">
+                    <section>
+                        <div>
+                            <h2>스포티지</h2>
+                            <p>TOP 1</p>
+                        </div>
+
+                        <p>1.6 터보 하이브리드 | 시그니처 프리미엄옵션 4WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_sportage_safety.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>종합 안전 등급</p>
+                                <p>1등급</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <img src="images/common/icon_right_arrow.svg"> 충돌
+                                    안전
+                                </p>
+                                <p>
+                                    <img src="images/common/icon_info_outline.svg">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>종합 안전 점수</p>
+                                <p>94.10점</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(4)</p>
+                                <div>
+                                    <p>빌트인 캠(하이브리드)</p>
+                                    <p>모니터링 팩(하이브리드 시그니처)</p>
+                                    <p>프리미엄(시그니처) 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>44,870,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>K8</h2>
+                            <p>TOP 2</p>
+                        </div>
+
+                        <p>1.6 하이브리드 | 시그니처 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_k8.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>종합 안전 등급</p>
+                                <p>1등급</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <img src="images/common/icon_right_arrow.svg"> 충돌
+                                    안전
+                                </p>
+                                <p>
+                                    <img src="images/common/icon_info_outline.svg">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>종합 안전 점수</p>
+                                <p>93.40점</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(4)</p>
+                                <div>
+                                    <p>컴포트(하이브리드)</p>
+                                    <p>드라이브 와이즈(시그니처)</p>
+                                    <p>전자제어 서스펜션 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>51,210,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>카니발</h2>
+                            <p>TOP 3</p>
+                        </div>
+
+                        <p>2.2 디젤 | 9인승 노블레스 내비적용 A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_carnival_safety.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>종합 안전 등급</p>
+                                <p>1등급</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <img src="images/common/icon_right_arrow.svg"> 충돌
+                                    안전
+                                </p>
+                                <p>
+                                    <img src="images/common/icon_info_outline.svg">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>종합 안전 점수</p>
+                                <p>92.50점</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>2,151 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(2)</p>
+                                <div>
+                                    <p>드라이브 와이즈</p>
+                                    <p>12.3인치 내비게이션(노블레스)</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>39,950,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>셀토스</h2>
+                            <p>TOP 4</p>
+                        </div>
+
+                        <p>1.6 가솔린 | 트렌디 2WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_seltos.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>종합 안전 등급</p>
+                                <p>1등급</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <img src="images/common/icon_right_arrow.svg"> 충돌
+                                    안전
+                                </p>
+                                <p>
+                                    <img src="images/common/icon_info_outline.svg">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>종합 안전 점수</p>
+                                <p>92.02점</p>
+                            </div>
+
+                            <div>
+                                <p>배기량</p>
+                                <p>1,598 cc</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(3)</p>
+                                <div>
+                                    <p>컨비니언스</p>
+                                    <p>드라이브 와이즈</p>
+                                    <p>10.25인치 내비게이션</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>24,610,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div>
+                            <h2>EV6</h2>
+                            <p>TOP 4</p>
+                        </div>
+
+                        <p>EV 전기차 | 롱레인지 GT-line 4WD A/T</p>
+
+                        <div>
+                            <img
+                                src="images/index/bestkia_ev6.png">
+                        </div>
+
+                        <div>
+                            <div>
+                                <p>종합 안전 등급</p>
+                                <p>1등급</p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <img src="images/common/icon_right_arrow.svg"> 충돌
+                                    안전
+                                </p>
+                                <p>
+                                    <img src="images/common/icon_info_outline.svg">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>종합 안전 점수</p>
+                                <p>91.90점</p>
+                            </div>
+
+                            <div>
+                                <p>배터리 용량</p>
+                                <p>77.4 kWh</p>
+                            </div>
+
+                            <div>
+                                <p>옵션(5)</p>
+                                <div>
+                                    <p>스웨이드 컬렉션</p>
+                                    <p>빌트인 캠</p>
+                                    <p>하이테크(GT-line) 등</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div>
+                                <h3>69,530,000</h3>
+                                <p>원</p>
+                            </div>
+
+                            <div>
+                                <button>자세히 보기</button>
+                                <button>견적 내기</button>
+                            </div>
+
+                            <p>※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <script>
+                    function openBest(evt, bestName) {
+                        var i, x, tablinks;
+                        x = document.getElementsByClassName("best");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablink");
+                        for (i = 0; i < x.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" tabmenu-color", "");
+                        }
+                        document.getElementById(bestName).style.display = "flex";
+                        evt.currentTarget.className += " tabmenu-color";
+                    }
+                </script>
+            </div>
+        </div>
+    </article>
+
+
+    <article class="event">
+        <div class="title">
+            <h1>Installment Calculator</h1>
+
+            <p>Monthly installment plan</p>
+        </div>
+        
+        <div class="flex_center">
+            <div class="eTab checked">
+                <h5>카니발</h5>
+            </div>
+            <div class="eTab">
+                <h5>쏘렌토</h5>
+            </div>
+            <div class="eTab">
+                <h5>스포티지</h5>
+            </div>
+            <div class="eTab">
+                <h5>모하비</h5>
+            </div>
+        </div>
+
+        <div class="flex_sb" id="cani">
+            <section class="leftSection">
+                <form action="">
+                    <div>
+                        <h4>할부 계산기</h4>
+                        <p>카니발 | 3.5 가솔린 | 프레스티지</p>
+                    </div>
+                    <h5>선수금</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_money">
+                            <input class="rangeMoney" type="range" name="money" id="money" min="32" max="2880"
+                                value="2880" step="1">
+                            <span class="span-small">32만원</span>
+                            <span class="span-small">2,880만원</span>
+                        </div>
+
+                        <div class="range_read">
+                            <input class="rangeRead" type="text" value="2880" readonly>
+                            만원
+                        </div>
+                    </div>
+                    <h5>할부기간</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_month">
+                            <input class="rangeMonth" type="range" min="0" max="5" step="1" value="5">
+                            <span class="span-small">3개월</span>
+                            <span class="span-small">60개월</span>
+                        </div>
+
+                        <div class="range_seb">
+                            <input class="rangeSeb" type="text" value="60" readonly>
+                            개월
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="rightSection">
+                <form action="">
+                    <div>
+                        <h4>모델 비교</h4>
+                        <p>카니발 | 3.5 가솔린 | 프레스티지</p>
+                    </div>
+                    <div class="flex_sb">
+                        <div>
+                            <h5>가격</h5>
+                            <h5>31,800,000원</h5>
+                            <h5>복합 연비</h5>
+                            <h5>9.1 km/l</h5>
+                            <h5>최고 출력</h5>
+                            <h5>294 ps / 6,400 rpm</h5>
+                            <h5>최대 토크</h5>
+                            <h5>36.2 kg·m / 5,000 rpm</h5>
+                            <h5>3년 유지비</h5>
+                            <h5>12,920,871원</h5>
+                        </div>
+                        <div class="fileplus">
+                            <div>
+                                <p>비교할 모델을 추가해주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <input type="file" id="file" name="file" style="display:none;" />
+
+        <div class="flex_sb" id="ssona">
+            <section class="leftSection">
+                <form action="">
+                    <div>
+                        <h4>할부 계산기</h4>
+                        <p>쏘렌토 | 1.6 하이브리드 | 노블레스</p>
+                    </div>
+                    <h5>선수금</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_money">
+                            <input class="rangeMoney1" type="range" name="money" id="money" min="32" max="3660"
+                                value="3660" step="1">
+                            <span class="span-small">32만원</span>
+                            <span class="span-small">3,660만원</span>
+                        </div>
+                        <div class="range_read">
+                            <input class="rangeRead1" type="text" value="3660" readonly>
+                            만원
+                        </div>
+                    </div>
+                    <h5>할부기간</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_month">
+                            <input class="rangeMonth1" type="range" min="0" max="5" step="1" value="5">
+                            <span class="span-small">3개월</span>
+                            <span class="span-small">60개월</span>
+                        </div>
+
+                        <div class="range_seb">
+                            <input class="rangeSeb1" type="text" value="60" readonly>
+                            개월
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="rightSection">
+                <form action="">
+                    <div>
+                        <h4>모델 비교</h4>
+                        <p>쏘렌토 | 1.6 하이브리드 | 노블레스</p>
+                    </div>
+                    <div class="flex_sb">
+                        <div>
+                            <h5>가격</h5>
+                            <h5>41,800,000원</h5>
+                            <h5>복합 연비</h5>
+                            <h5>15.1 km/l</h5>
+                            <h5>최고 출력</h5>
+                            <h5>180 ps / 5,400 rpm</h5>
+                            <h5>최대 토크</h5>
+                            <h5>26.2 kg·m / 4,000 rpm</h5>
+                            <h5>3년 유지비</h5>
+                            <h5>9,920,871원</h5>
+                        </div>
+                        <div class="fileplus">
+                            <div>
+                                <p>비교할 모델을 추가해주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="flex_sb" id="spo">
+            <section class="leftSection">
+                <form action="">
+                    <div>
+                        <h4>할부 계산기</h4>
+                        <p>스포티지 | 2.0 디젤 | 트렌디</p>
+                    </div>
+                    <h5>선수금</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_money">
+                            <input class="rangeMoney2" type="range" name="money" id="money" min="32" max="4780"
+                                value="4780" step="1">
+                            <span class="span-small">32만원</span>
+                            <span class="span-small">4,780만원</span>
+                        </div>
+
+                        <div class="range_read">
+                            <input class="rangeRead2" type="text" value="4780" readonly>
+                            만원
+                        </div>
+                    </div>
+                    <h5>할부기간</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_month">
+                            <input class="rangeMonth2" type="range" min="0" max="5" step="1" value="5">
+                            <span class="span-small">3개월</span>
+                            <span class="span-small">60개월</span>
+                        </div>
+                        <div class="range_seb">
+                            <input class="rangeSeb2" type="text" value="60" readonly>
+                            개월
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="rightSection">
+                <form action="">
+                    <div>
+                        <h4>모델 비교</h4>
+                        <p>스포티지 | 2.0 디젤 | 트렌디</p>
+                    </div>
+                    <div class="flex_sb">
+                        <div>
+                            <h5>가격</h5>
+                            <h5>30,000,000원</h5>
+                            <h5>복합 연비</h5>
+                            <h5>12.1 km/l</h5>
+                            <h5>최고 출력</h5>
+                            <h5>184 ps / 4,400 rpm</h5>
+                            <h5>최대 토크</h5>
+                            <h5>42.2 kg·m / 2,000 rpm</h5>
+                            <h5>3년 유지비</h5>
+                            <h5>10,920,871원</h5>
+                        </div>
+                        <div class="fileplus">
+                            <div>
+                                <p>비교할 모델을 추가해주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="flex_sb" id="moha">
+            <section class="leftSection">
+                <form action="">
+                    <div>
+                        <h4>할부 계산기</h4>
+                        <p>모하비 | 3.0 | 디젤마스터즈</p>
+                    </div>
+                    <h5>선수금</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_money">
+                            <input class="rangeMoney3" type="range" name="money" id="money" min="32" max="5580"
+                                value="5580" step="1">
+                            <span class="span-small">32만원</span>
+                            <span class="span-small">5,580만원</span>
+                        </div>
+                        <div class="range_read">
+                            <input class="rangeRead3" type="text" value="5580" readonly>
+                            만원
+                        </div>
+                    </div>
+                    <h5>할부기간</h5>
+                    <div class="range_box flex_sb">
+                        <div class="range_month">
+                            <input class="rangeMonth3" type="range" min="0" max="5" step="1" value="5">
+                            <span class="span-small">3개월</span>
+                            <span class="span-small">60개월</span>
+                        </div>
+                        <div class="range_seb">
+                            <input class="rangeSeb3" type="text" value="60" readonly>
+                            개월
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="rightSection">
+                <form action="">
+                    <div>
+                        <h4>모델 비교</h4>
+                        <p>모하비 | 3.0 | 디젤마스터즈</p>
+                    </div>
+                    <div class="flex_sb">
+                        <div>
+                            <h5>가격</h5>
+                            <h5>54,800,000원</h5>
+                            <h5>복합 연비</h5>
+                            <h5>9.1 km/l</h5>
+                            <h5>최고 출력</h5>
+                            <h5>224 ps / 3,400 rpm</h5>
+                            <h5>최대 토크</h5>
+                            <h5>36.2 kg·m / 3,000 rpm</h5>
+                            <h5>3년 유지비</h5>
+                            <h5>14,920,871원</h5>
+                        </div>
+                        <div class="fileplus">
+                            <div>
+                                <p>비교할 모델을 추가해주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </article>
+
+
+
+    <script>
+        let bestTabs = [];
+        let eTabs = [];
+        let tab_serch = [];
+        let colsecs = [];
+        let ones = [];
+        bestTabs = document.querySelectorAll('.bestTab');
+        eTabs = document.querySelectorAll('.eTab');
+        tab_serch = document.querySelectorAll('.tab1');
+        colsecs = document.querySelectorAll('.colsec');
+        ones = document.querySelectorAll('.one');
+
+        for (let i = 0; i < bestTabs.length; i++) {
+            bestTabs[i].addEventListener('click', () => tabschange(i));
+        }
+        for (let i = 0; i < eTabs.length; i++) {
+            eTabs[i].addEventListener('click', () => tabschange1(i));
+        }
+        for (let i = 0; i < tab_serch.length; i++) {
+            tab_serch[i].addEventListener('click', () => tabonoff(i));
+        }
+        for (let i = 0; i < colsecs.length; i++) {
+            colsecs[i].addEventListener('click', () => fonsiup(i))
+        }
+
+        function tabonoff(i) {
+            tab_serch[i].classList.toggle('check');
+        }
+
+        function fonsiup(i) {
+            ones[i].classList.toggle('check');
+        }
+
+
+        function tabschange(i) {
+            for (let j = 0; j < bestTabs.length; j++) {
+                bestTabs[j].classList.remove('checked');
+            }
+            document.querySelector('#second').style.display = "none";
+            document.querySelector('#three').style.display = "none";
+            document.querySelector('#four').style.display = "none";
+            document.querySelector('#five').style.display = "none";
+
+            bestTabs[i].classList.add('checked');
+            switch (i) {
+                case 0:
+                    document.querySelector('#second').style.display = "flex";
+                    break;
+                case 1:
+                    document.querySelector('#three').style.display = "flex";
+                    break;
+                case 2:
+                    document.querySelector('#four').style.display = "flex";
+                    break;
+                case 3:
+                    document.querySelector('#five').style.display = "flex";
+                    break;
+            }
+        }
+
+        let thplus = window.matchMedia("screen and (min-width:1366px");
+
+        function tabschange1(i) {
+            for (let j = 0; j < eTabs.length; j++) {
+                eTabs[j].classList.remove('checked');
+            }
+            document.querySelector('#cani').style.display = "none";
+            document.querySelector('#ssona').style.display = "none";
+            document.querySelector('#spo').style.display = "none";
+            document.querySelector('#moha').style.display = "none";
+
+            eTabs[i].classList.add('checked');
+            switch (i) {
+                case 0:
+                    document.querySelector('#cani').style.display = "flex";
+                    // if(thplus.matches) {
+                    // 	document.querySelector('#cani').style.flexDirection = "row";
+                    // }
+                    // else{
+                    // 	document.querySelector('#cani').style.flexDirection = "column";
+                    // }
+                    break;
+                case 1:
+                    document.querySelector('#ssona').style.display = "flex";
+                    // if(thplus.matches) {
+                    // 	document.querySelector('#ssona').style.flexDirection = "row";
+                    // }
+                    // else{
+                    // 	document.querySelector('#ssona').style.flexDirection = "column";
+                    // }
+                    break;
+                case 2:
+                    document.querySelector('#spo').style.display = "flex";
+                    // if(thplus.matches) {
+                    // 	document.querySelector('#spo').style.flexDirection = "row";
+                    // }
+                    // else{
+                    // 	document.querySelector('#spo').style.flexDirection = "column";
+                    // }
+                    break;
+                case 3:
+                    document.querySelector('#moha').style.display = "flex";
+                    // if(thplus.matches) {
+                    // 	document.querySelector('#moha').style.flexDirection = "row";
+                    // }
+                    // else{
+                    // 	document.querySelector('#moha').style.flexDirection = "column";
+                    // }
+                    break;
+            }
+        }
+
+        // 숫자 올리기 + 태그가 보여져야 작동하는 것.
+
+        let isVisible = false;
+
+        $(window).on('scroll', function () {
+            if (checkVisible($('.nums')) && !isVisible) {
+                $('.nums').each(function () {
+                    const $this = $(this),
+                        countTo = $this.attr('data-count');
+
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    }, {
+                        duration: 15000,
+                        easing: 'linear',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+                            //3자리 마다 콤마 표시 적용
+                        }
+                    });
+                });
+                isVisible = true;
+            }
+        });
+
+
+        let isVisible2 = false;
+
+        $(window).on('scroll', function () {
+            if (checkVisible($('.nums2')) && !isVisible2) {
+                $('.nums2').each(function () {
+                    const $this = $(this),
+                        countTo = $this.attr('data-count');
+
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    }, {
+                        duration: 15000,
+                        easing: 'linear',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+                            //3자리 마다 콤마 표시 적용
+                        }
+                    });
+                });
+                isVisible2 = true;
+            }
+        });
+
+
+        // input range 채우기
+
+        function checkVisible(elm, eval) {
+            eval = eval || "object visible";
+            var viewportHeight = $(window).height(), // Viewport Height
+                scrolltop = $(window).scrollTop(), // Scroll Top
+                y = $(elm).offset().top,
+                elementHeight = $(elm).height();
+
+            if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
+            if (eval == "above") return ((y < (viewportHeight + scrolltop)));
+        }
+
+        document.querySelector('.rangeMoney').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+
+        document.querySelector('.rangeMonth').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+        document.querySelector('.rangeMoney1').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+
+        document.querySelector('.rangeMonth1').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+        document.querySelector('.rangeMoney2').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+
+        document.querySelector('.rangeMonth2').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+        document.querySelector('.rangeMoney3').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+
+        document.querySelector('.rangeMonth3').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #FFE283 0%, #FFE283 ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) ' + gradient_value * event.target.value + '%, rgb(236, 236, 236) 100%)';
+        });
+
+
+
+        // 셀렉터 옵션스
+
+        let choices = [];
+        let ops = [];
+        choices = document.querySelectorAll('.choice');
+        ops = document.querySelectorAll('.options');
+
+        for (let i = 0; i < choices.length; i++) {
+            choices[i].addEventListener('click', () => selectdiv(i));
+        }
+
+        function selectdiv(i) {
+            ops[i].classList.add('act');
+        }
+
+        // text change
+
+        function offop() {
+            for (let i = 0; i < ops.length; i++) {
+                ops[i].classList.remove('act');
+            }
+        }
+
+        // 스크롤 원하는 높이로 이동
+
+        $('#top_btn').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 400);
+            return false;
+        });
+
+        // 엔터키 이벤트
+        function enterkey() {
+            if (window.event.keyCode == 13) {
+                appendDiv();
+            }
+        };
+
+
+        // range 옮기면 텍스트 바꾸기
+
+        let paymentRange = document.querySelector(".rangeMoney");
+        let advanceTotal = document.querySelector(".rangeRead");
+        let advanceTotalValue = Number(paymentRange.value);
+        let Cayman718Price = Number(95000000);
+        let advancePaymentValue = Cayman718Price - advanceTotalValue;
+
+        let periodRange = document.querySelector(".rangeMonth");
+        let installmentTotal = document.querySelector(".rangeSeb");
+        let rangeSteps = [3, 12, 24, 36, 48, 60];
+        let installmentTotalValue = Number(rangeSteps[periodRange.value]);
+
+        let monthlyPaymentValue = advancePaymentValue / installmentTotalValue;
+
+
+
+        paymentRange.oninput = function () {
+            advanceTotalValue = Number(this.value);
+            advanceTotal.value = advanceTotalValue.toString()
+                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            advancePaymentValue = Cayman718Price - advanceTotalValue;
+            advancePayment.innerHTML = advancePaymentValue.toLocaleString('ko-KR');
+            monthlyPaymentValue = advancePaymentValue / installmentTotalValue;
+            monthlyPaymentValue = Math.floor(monthlyPaymentValue);
+            monthlyPayment.innerHTML = monthlyPaymentValue.toLocaleString('ko-KR');
+        }
+
+        //할부 기간
+
+
+        periodRange.oninput = function () {
+            installmentTotalValue = Number(rangeSteps[this.value]);
+            installmentTotal.value = installmentTotalValue.toLocaleString('ko-KR');
+            monthlyPaymentValue = Math.floor(monthlyPaymentValue);
+            monthlyPaymentValue = advancePaymentValue / installmentTotalValue;
+            monthlyPayment.innerHTML = monthlyPaymentValue.toLocaleString('ko-KR');
+        }
+
+
+        let paymentRange1 = document.querySelector(".rangeMoney1");
+        let advanceTotal1 = document.querySelector(".rangeRead1");
+        let advanceTotalValue1 = Number(paymentRange1.value);
+        let Cayman718Price1 = Number(3660);
+        let advancePaymentValue1 = Cayman718Price1 - advanceTotalValue1;
+
+        let periodRange1 = document.querySelector(".rangeMonth1");
+        let installmentTotal1 = document.querySelector(".rangeSeb1");
+        let rangeSteps1 = [3, 12, 24, 36, 48, 60];
+        let installmentTotalValue1 = Number(rangeSteps1[periodRange1.value]);
+
+        let monthlyPaymentValue1 = advancePaymentValue1 / installmentTotalValue1;
+
+
+
+
+
+        paymentRange1.oninput = function () {
+            advanceTotalValue1 = Number(this.value);
+            advanceTotal1.value = advanceTotalValue1.toString()
+                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+            advancePaymentValue1 = Cayman718Price1 - advanceTotalValue1;
+            advancePayment1.innerHTML = advancePaymentValue1.toLocaleString('ko-KR');
+            monthlyPaymentValue1 = advancePaymentValue1 / installmentTotalValue1;
+            monthlyPaymentValue1 = Math.floor(monthlyPaymentValue1);
+            monthlyPayment1.innerHTML = monthlyPaymentValue1.toLocaleString('ko-KR');
+        }
+
+        //할부 기간
+
+
+        periodRange1.oninput = function () {
+            installmentTotalValue1 = Number(rangeSteps1[this.value]);
+            installmentTotal1.value = installmentTotalValue1.toLocaleString('ko-KR');
+            monthlyPaymentValue1 = Math.floor(monthlyPaymentValue1);
+            monthlyPaymentValue1 = advancePaymentValue1 / installmentTotalValue1;
+            monthlyPayment1.innerHTML = monthlyPaymentValue1.toLocaleString('ko-KR');
+        }
+
+
+        let paymentRange2 = document.querySelector(".rangeMoney2");
+        let advanceTotal2 = document.querySelector(".rangeRead2");
+        let advanceTotalValue2 = Number(paymentRange2.value);
+        let Cayman718Price2 = Number(4780);
+        let advancePaymentValue2 = Cayman718Price2 - advanceTotalValue2;
+
+        let periodRange2 = document.querySelector(".rangeMonth2");
+        let installmentTotal2 = document.querySelector(".rangeSeb2");
+        let rangeSteps2 = [3, 12, 24, 36, 48, 60];
+        let installmentTotalValue2 = Number(rangeSteps2[periodRange2.value]);
+
+        let monthlyPaymentValue2 = advancePaymentValue2 / installmentTotalValue2;
+
+    </script>
+    <script src="script.js"></script>
+
+
+    <article class="benefits">
+        <div class="title">
+          <h1>Purchase benefits</h1>
+
+          <p>Purchase benefits of this month</p>
+        </div>
+
+        <div class="Slidesbackground">
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_carnival.png">
+                    <h3>카니발</h3>
+                    <p>2.2 디젤 | 9인승 노블레스 A/T</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 722,219</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 38,100,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_sorento.png">
+                    <h3>쏘렌토</h3>
+                    <p>2.2 디젤 | 5인승 프레스티지 2WD DCT</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 697,387</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 36,790,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_sportage.png">
+                    <h3>스포티지</h3>
+                    <p>1.6 터보 하이브리드 | 프레스티지 2WD A/T</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 636,159</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 33,560,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_k8.png">
+                    <h3>K8</h3>
+                    <p>1.6 하이브리드 | 노블레스 A/T</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 806,762</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 42,560,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_k9.png">
+                    <h3>K9</h3>
+                    <p>3.3 가솔린 터보 | 플래티넘 AWD</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 1,272,887</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 67,150,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+
+            <section class="mySlides fade">
+                <div>
+                    <img
+                        src="images/index/benefits_mohave.png">
+                    <h3>모하비</h3>
+                    <p>3.0 디젤 | 6인승 플래티넘 그래비티 AWD A/T</p>
+                </div>
+
+                <div>
+                    <div>
+                        <h3>월 1,005,799</h3>
+                        <p>원</p>
+                    </div>
+
+                    <p>(차량가격 53,060,000원)</p>
+
+                    <p>M할부 일반형 / 60개월 / 선수율 1%</p>
+                </div>
+
+                <p>※ 차량별 가격은 최다 판매 트림 기준입니다.</p>
+            </section>
+        </div>
+    </article>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 1000);
+        }
+    </script>
+
+
+<article class="news">
+    <div class="title">
+        <h1>Kia News</h1>
+
+        <p>Go to read more</p>
+    </div>
+    
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <small>NEWS</small>
+
+                <p>기아, '2023 기아 EV 데이' 개최</p>
+
+                <button>Read ▶</button>
+
+                <div></div>
+            </div>
+
+            <div class="swiper-slide">
+                <small>NEWS</small>
+
+                <p>기아, '서울 ADEX 2023' 참가</p>
+
+                <button>Read ▶</button>
+
+                <div></div>
+            </div>
+
+            <div class="swiper-slide">
+                <small>NEWS</small>
+
+                <p>기아, 구매부터 중고차 가격 보장까지 책임지는 'EV9 토탈 솔루션'
+                    출시</p>
+
+                <button>Read ▶</button>
+                
+                <div></div>
+            </div>
+            
+            <div class="swiper-slide">
+                <small>NEWS</small>
+
+                <p>'기아 EV 익스피리언스 위크' 시승 참여 고객 모집</p>
+
+                <button>Read ▶</button>
+                
+                <div></div>
+            </div>
+
+            <div class="swiper-slide">
+                <small>NEWS</small>
+
+                <p>기아, 전 세계 대리점 대회서 EV 가속화·수출확대 등 중장기 사업전략
+                    공유</p>
+
+                <button>Read ▶</button>
+                
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        autoplay: {
+            delay: 800, // 시간 설정
+            disableOnInteraction: false, // false-스와이프 후 자동 재생
+            loop: true,
+        },
+    });
+    </script>
+</article>
+
+
+    <article class="experience">
+        <div class="title">
+            <h1>Kia Experience hub</h1>
+
+            <p>Amazing experience space</p>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <img src="images/index/experience_kia-360-mo.jpg">
+                </div>
+
+                <div>
+                    <p>모든 상상과 영감의 공간</p>
+                    
+                    <h3>Kia360</h3>
+
+                    <p>Kia360에서 새로운 모빌리티 라이프를 위한 여정을 시작해 보세요.</p>
+
+                    <img src="images/common/icon_plus.png">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/index/experience_flagship-mo.jpg">
+                </div>
+
+                <div>
+                    <h3>플래그십 스토어</h3>
+
+                    <p>모빌리티의 현재와 미래를 경험하는 기아의 새로운 복합체험 공간</p>
+
+                    <img src="image/common/icon_plus.png">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/index/experience_unplugged-ground-mo.jpg">
+                </div>
+
+                <div>
+                    <h3>우리의 내일을 만나는 공간</h3>
+                    
+                    <h3>EV 언플러그드 그라운드</h3>
+
+                    <p>기아의 EV와 만나 달라질 당신만의 라이프스타일을 발견해 보세요.</p>
+
+                    <img src="images/common/icon_plus.png">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/index/experience_driving-mo.jpg">
+                </div>
+
+                <div>
+                    <h3>기아 드라이빙 익스피리언스</h3>
+
+                    <p>국내 최대 규모 드라이빙 센터에서 기아만의 역동적인 성능과 새로운 드라이빙 기술을 경험해 보세요.</p>
+
+                    <img src="images/common/icon_plus.png">
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>

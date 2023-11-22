@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>jiwon</title>
+    <link rel="stylesheet" href="posting.css">
+    <link rel="stylesheet" href="header-nav-footer.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div w3-include-html="navigation.html"></div>
+
+    <h1 class="h-big">FAQ</h1>
+
+    <article class="product-ques">
+        <h2>자주 묻는 질문</h2>
+
+        <div>
+            <ul>
+                <li>차량 작동 / 신기술 등 궁금점은 기아 Kia - 캬TV 에서 영상으로 더욱 쉽게 확인하세요.</li>
+                <li>차량 구입 문의는 계약 영업점 또는 판매 네트워크에서 문의해 주세요.</li>
+                <li>차량 관리, 정비 관련 문의는 차량 관리 페이지를 이용해 주세요.</li>
+            </ul>
+        </div>
+
+        <div>
+            <select>
+                <option value="">차량 구매</option>
+                <option value="">차량 정비</option>
+                <option value="">기아멤버스</option>
+                <option value="">홈페이지</option>
+                <option value="">기타</option>
+            </select>
+
+            <div>
+                <input type="search" placeholder="검색어를 입력해주세요">
+                <img src="images/common/icon_search.png">
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <button class="tabmenu-button tablink tabmenu-color" onclick="openCity(event, 'car-buy')">차량구매</button>
+
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'car-care')">차량정비</button>
+
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'kia-members')">멤버스</button>
+
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'homepages')">홈페이지</button>
+
+                <button class="tabmenu-button tablink" onclick="openCity(event, 'etcz')">기타</button>
+            </div>
+
+            <div>
+                <div id="car-buy" class="city">
+                    <div>
+                        <p>40 건</p>
+                        <button type="button" class="collapsible">EV케어 프로그램이란 무엇인가요?</button>
+
+                        <div class="content">
+                            <p>기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.</p>
+                            <p>기아EV케어 ↗</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">Kia EV 그린패스 요즘에는 어떤 서비스인가요?</button>
+
+                        <div class="content">
+                            <p>멤버십 월 구독료는 매월 1일 정기 자동 결제됩니다.<br>
+                                · 단, 1회 차의 경우, 신청 일자 기준 잔여기간을 일할 계산하여 청구하며, 2회 차부터 등록된 지불수단을 통해 정기 자동 결제가 이루어집니다.
+                                * 단, 등록된 신용카드 청구 실패 시 고객에게 2번의 추가 청구를 진행,
+                                3번째 또한 청구 실패할 경우 해당 멤버십 자동 해지/자동 해지 후 재가입하여도 할인율 소급 적용 불가<br><br>
+                                월 정액 요금을 납부하면 약정된 충전 양만큼 에스에스차처, 한전 급속충전기에서 일정 비율 할인받으실 수 있는 요금제 상품입니다.
+                                <br>
+                                · SSC : 최대 50% 할인 / 한전 : 최대 20% 할인
+                                <br><br>
+                                라이트, 그린+ 두 가지 요금제가 있으며, 멤버십 월 구독료를 납부하시면 각 요금제별 약정된 충전 량까지 할인받으실 수 있습니다.
+                                <br>
+                                * 자세한 내용은 아래 링크를 클릭해 주세요.
+                            </p>
+                            <p>Kia EV 그린패스 ↗</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">광고성 정보 수신 동의 확인 문자/이메일을 받았습니다.</button>
+                        <div class="content">
+
+                            <p>기아차량 보유 고객 중 광고성 정보 수신에 동의하신 고객님께 수신동의 여부를 확인하는 메시지 입니다.<br>
+                                이는 광고성 정보 수신에 동의한 고객님께 2년마다 수신동의 여부를 확인하는 것이 의무화 되면서 수신동의 확인을 위해 메시지를 발송해드렸습니다.<br>
+                                또한, 수신 동의 철회 시 상품정보, 혜택정보, 프로모션 및 이벤트 안내 등을 받아보실 수 없으며, 광고성 정보 수신동의 철회 시
+                                고객센터(080-200-2000)로 문의하여 주시기 바랍니다.</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">기아 통합 계정이 무엇인가요?</button>
+                        <div class="content">
+
+                            <p>기아 통합 계정은, 기아닷컴 / 기아멤버스 홈페이지 / MyKia 모바일 앱 / 기아 디지털키 / Kia Connect 등 기아에서 제공하는 서비스를 사용하기
+                                위한 계정으로, 하나의 ID로 모든 서비스를 이용할 수 있습니다.<br>
+
+                                * 단, 로그인 후 각 서비스 별로 추가적인 서비스 가입이 필요합니다.<br>
+
+                                * 기아닷컴 / 기아멤버스 홈페이지 / MyKia에 가입 시도 시, 정상적으로 가입이 이루어지지 않은 경우에는 기타 서비스(Kia Connect 등)의 가입
+                                여부를 먼저 점검해 보시기 바랍니다. 타 서비스 가입 이력이 있다면 별도 가입 절차 없이 해당 ID로 로그인 및 서비스 이용 가능합니다.</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">상승 내장탑차가 무엇인가요?</button>
+                        <div class="content">
+
+                            <p>상승 내장탑차는 단, 1대로 저상형에서 플러스형 높이까지 조절이 가능한 탑차입니다.<br>
+
+                                탑과 캐빈이 유사한 높이로 설계되어 지하주차장 출입이 용이한 저상형 높이부터 넓은 적재용적으로 높은 수용효율을 제공하는 플러스형 높이까지 조절이 가능합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="page-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                </div>
+
+
+                <div id="car-care" class="city" style="display:none">
+                    <div>
+                        <p>100 건</p>
+
+                        <button type="button" class="collapsible">단속 카메라 및 안내 경로에 대한 오류 등이 발행하는 경우 어떤 조치를 취할 수
+                            있나요?</button>
+
+                        <div class="content">
+                            <p>사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수
+                                있습니다.<br>
+
+                                신고된 정보는 향후 안전 운행을 위한 소중한 데이터로 활용됩니다.<br>
+
+                                * 지도 정보가 이상하면 “지도정보”, 도로 카메라 정보가 잘못되어 있으면 “카메라”, 터널 등 외부 공기를 차단해야 할 곳이 있다면 “외부 공기 차단”을
+                                눌러주세요.<br>
+
+                                * 표준형5W, 고급형6세대 가 적용된 차종에서 제공됩니다.</p>
+
+                            <img src="images/faq/camera.png">
+                        </div>
+
+
+                        <button type="button" class="collapsible">모바일 내비게이션 대비 기아 내비게이션의 ‘도착 예정 시간’은 정확한가요?</button>
+
+                        <div class="content">
+                            <p>기아 내비게이션은 커넥티드 카 기반의 교통 정보 활용, 경로 탐색 품질이 개선되는 순환 구조를 통해 안정된 경로 품질을 제공하고 있습니다. </p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">내비게이션 무선 업데이트는 어떻게 이뤄지나요?</button>
+                        <div class="content">
+                            <p>일정 시간 이상 주행 시, 최신 버전의 지도와 소프트웨어로 자동 업데이트가 진행되며, <br>
+
+                                주행 종료 후 시동을 끌 때 팝업 표시창의 ‘시작’ 버튼을 누르면 시스템 업데이트까지 최종 완료됩니다.<br>
+
+                                * 업데이트 상태 확인은 '설정-일반-SW정보/업데이트' 에서 확인할 수 있습니다.</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">내비게이션 업데이트 주기가 어떻게 되나요?</button>
+                        <div class="content">
+                            <p>내비게이션은 연 6회 정기 유/무선 업데이트를 통해 최신 지도 및 안정적인 내비게이션 시스템 & 신규 기능 적용을 제공하고 있으며,<br>
+
+                                OTA 무선 업데이트를 통해 더욱 편리한 업데이트 경험을 제공하고 있습니다. (단속 카메라 반영 등 기본 정보는 수시로 업데이트 중에 있음)<br>
+
+                                * OTA 무선 업데이트를 위해서는 기아커넥트 서비스 가입이 필요하며, 표준형5W/고급형6세대가 적용된 차종에서 제공됩니다. </p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">빌트인 캠 USB메모리 저장버튼이 활성화가 안됩니다. 어떻게 해야 하나요?</button>
+                        <div class="content">
+                            <p>USB 연결 단자를 확인해 주세요. 정상적으로 연결 시 화면 상단에 USB 연결 아이콘이 표시됩니다.
+
+                                빌트인 캠 전용 단자는 멀티미디어 USB단자와 다르게 글로브 박스 또는 콘솔 박스 내부에 위치해 있습니다. (차종별 상이)</p>
+                        </div>
+                    </div>
+
+                    <div class="page-numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                </div>
+
+
+                <div id="kia-members" class="city" style="display:none">
+                    <div>
+                        <p>4 건</p>
+
+                        <button type="button" class="collapsible">기아멤버스 모바일카드 발급과 사용방법이 어떻게 되나요?</button>
+
+                        <div class="content">
+                            <p>기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.<br>
+
+                                · 개인(법인 실운행자 포함)<br>
+
+                                · 개인 사업자 회원 대상<br>
+
+                                * 법인제외 모바일 카드도 실물 카드와 동일하게 카드번호 확인 및 바코드 리딩으로 포인트 적립/ 사용이 가능합니다.<br>
+
+                                (제휴처에서 바코드 리딩이 어려울 경우 단말기에 카드번호 입력 후 사용)</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">기아멤버스 카드를 모바일카드 or 실물 카드로 선택하여 받을 수 있나요?</button>
+
+                        <div class="content">
+                            <p>2018년 4월 2일부터 기아자동차 구입 시 멤버십 가입 신청서에 "모바일카드"를 선택하신 경우, 별도의 실물 카드 발급 없이 모바일카드 발급 안내 문자가
+                                발송되고 있습니다. <br>
+                                수신하신 문자에 포함된 URL로 접속하신 후 모바일카드 발급 및 사용이 가능하십니다. <br>
+                                (단, 문자수신 동의 여부에 ‘거부’ 를 선택하시면 모바일카드 관련 안내 문자 수신이 불가할 수 있습니다.)<br><br>
+                                K9 또는 스팅어 차량 구매 후 전용 멤버십에 가입하신 경우, 해당 차량은 실물 카드를 포함한 전용 패키지가 제공되고 있어 가입 시 모바일카드로 선택은
+                                어렵고, 실물 카드로 발급될 예정이니 참고해 주시기 바랍니다. (가입 후 기아멤버스 애플리케이션에서 모바일카드도 이용 가능)<br><br>
+                                최초 가입 시 모바일카드를 선택하셨더라도, 추후 실물 카드 재발급이 가능합니다.<br>
+                                기아멤버스 사이트 > MY 멤버스 > 나의 카드 조회 > 카드 재발급 신청을 통해 발급이 가능합니다. <br><br>
+                                * 참고: 기아 멤버십은 차량 별이 아닌 고객번호를 기준으로 관리되고 있습니다.<br>
+                                기존에 멤버십 카드를 발급한 이력이 있다면, 가입 신청서를 작성하셔도 별도의 카드가 추가 발급되지는 않습니다.<br>
+                                현재, 멤버십 카드를 분실하셨다면 고객센터(080-200-2000) 또는 기아멤버스 사이트를 통해 재발급 신청해 주시기 바랍니다.</p>
+
+                            <p>기아멤버스 ↗</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">기아멤버스 포인트 소멸 시점은 언제 인가요?</button>
+
+                        <div class="content">
+                            <p>기아멤버스 포인트 유효기간은 적립시점으로부터 5년입니다.
+                                기아멤버스 포인트 소멸은 포인트 활용기간을 좀 더 확보할 수 있도록 초기 적립시점의 익월 1일에
+                                일괄적으로 소멸 됩니다.<br>
+
+                                기아멤버스 포인트는 오토큐 및 제휴업체에서 사용 가능하니 자세한 내용은 기아멤버스 홈페이지를
+                                참고하여 주시기 바랍니다.</p>
+                        </div>
+
+                        <button type="button" class="collapsible">기아멤버스 카드를 분실했는데, 재발급 받기 전에 오토큐에서 포인트를 사용할 수
+                            있습니까?</button>
+
+                        <div class="content">
+                            <p>적립된 멤버스포인트는 카드 없이도 오토큐에서 사용이 가능합니다.<br>
+
+                                오토큐에서 실물 카드 없이 멤버스포인트 사용 시 아래와 같은 방법으로 이용하시면 됩니다.<br>
+
+                                - 차량명의자와 휴대폰명의자가 동일한 경우 휴대폰 인증하여 사용 가능</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="homepages" class="city" style="display:none">
+                    <div>
+                        <p>1 건</p>
+
+                        <button type="button" class="collapsible">기아 홈페이지 회원가입을 했으나 로그인이 되지 않습니다. 왜 그런가요?</button>
+                        <div class="content">
+                            <p>정보통신망법 개정 및 회원 고객님의 개인정보보호를 위하여 홈페이지에 1년 이상 로그인하지 않는 경우, 회원정보의 보호 및 운영의 효율성을 위해 휴면계정으로
+                                전환됩니다. <br>
+                                휴면계정으로 로그인이 되지 않을 경우, 본인인증을 통해 해제 후 이용이 가능합니다. <br>
+                                또한, 홈페이지에 1년 이상 비로그인 시 분리보관 후 4년 후 탈퇴/파기 합니다. <br><br>
+
+                                * 휴면계정 해제(본인 인증)가 불가하거나 정상 로그인이 되지 않는 경우는 기아 고객센터(080-200-2000)로 문의하여 주시기 바랍니다. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="etcz" class="city" style="display:none">
+                    <div>
+                        <p>5 건</p>
+
+                        <button type="button" class="collapsible">기아 커넥트 스토어는 무엇이며, 어떻게 이용하나요?</button>
+
+                        <div class="content">
+                            <p>차량 구매 순간의 선택이 카 라이프의 전부를 결정한 것은 아닙니다.<br>
+
+                                이제 차량 구매 후에도 기아 커넥트 스토어(connectstore.kia.com)가 제공하는
+
+                                새로운 기능들을 언제 어디서든지 추가로 구매해 평생, 또는 원하는 기간 동안 이용하실 수 있습니다.<br>
+
+
+                                기아 커넥트 스토어 이용관련 자세한 내용은
+
+                                기아 커넥트 스토어 이용안내 페이지(https://connectstore.kia.com/kr/info/buying-Installation-guide)에서 확인
+                                가능합니다.</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">완속 충전 케이블은 언제 사용하나요?</button>
+
+                        <div class="content">
+                            <p>일부 완속 충전기는 관리의 어려움 등의 이유로 충전 케이블 미 설치
+                                이런 경우 개인용 완속 충전 케이블 사용</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">완속과 급속 충전기는 어떻게 구분하나요?</button>
+
+                        <div class="content">
+                            <p>국가표준으로 지정된 충전구의 핀 갯수로 구분됨<br>
+                                핀이 5개인 AC단상은 완속 충전기<br>
+                                핀이 7개인 DC콤보는 급속 충전기<br>
+                                핀이 10개인 DC차데모는 급속 충전기</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">완속과 급속 충전기는 어떻게 구분하나요?</button>
+
+                        <div class="content">
+                            <p>국가표준으로 지정된 충전구의 핀 갯수로 구분됨<br>
+                                핀이 5개인 AC단상은 완속 충전기<br>
+                                핀이 7개인 DC콤보는 급속 충전기<br>
+                                핀이 10개인 DC차데모는 급속 충전기</p>
+                        </div>
+
+
+                        <button type="button" class="collapsible">충전카드는 어떻게 발급받아야 하나요?</button>
+
+                        <div class="content">
+                            <p>저공해차 통합 누리집 사이트(WWW.EV.OR.KR)에서 공공 충전 멤버십 카드 발급가능<br>
+                                기타 충전사업자별 민간 충전 멤버십 카드는 사업자별 창구를 통해 발급가능</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openCity(evt, cityName) {
+                    var i, x, tablinks;
+                    x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" tabmenu-color", "");
+                    }
+                    document.getElementById(cityName).style.display = "block";
+                    evt.currentTarget.className += " tabmenu-color";
+                }
+            </script>
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+        </div>
+    </article>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

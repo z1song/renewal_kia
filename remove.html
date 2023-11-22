@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>jiwon</title>
+    <link rel="stylesheet" href="membership.css">
+    <link rel="stylesheet" href="header-nav-footer.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div w3-include-html="navigation.html"></div>
+
+    <h1 class="h-big">Remove Account</h1>
+
+
+    <article class="del-account">
+        <h2>회원탈퇴</h2>
+
+        <h5>정말로 탈퇴하시겠습니까?</h5>
+
+        <p>탈퇴 시 이용내역이 삭제되며 서비스 이용이 제한됩니다.<br>또한 삭제된 계정은 복구되지 않습니다.</p>
+
+        <button>탈퇴하기</button>
+    </article>
+
+
+    <article class="del-comp">
+        <h2>탈퇴 완료</h2>
+
+        <img src="images/login/remove_del_icon.png">
+
+        <h5>정상적으로 탈퇴 처리 되었습니다.</h5>
+
+        <p>그 동안 이용해주셔서 감사합니다.</p>
+
+        <button>홈으로</button>
+    </article>
+
+
+    <article class="sur">
+        <h2>탈퇴회원 설문조사</h2>
+
+        <h5>불편했던 점, 개선할 점을 공유해주시면<br> 더 나은 서비스를 위해 반영하도록 하겠습니다.</h5>
+
+        <p>탈퇴 사유</p>
+
+        <select>
+            <option value="">선택해주세요.</option>
+            <option value="">서비스 불만족</option>
+            <option value="">계정이 불필요함</option>
+            <option value="">기타</option>
+        </select>
+
+        <p>건의사항</p>
+
+        <textarea>소중한 의견 귀담아 듣겠습니다.</textarea>
+
+        <button class="button-primary">제출하기</button>
+    </article>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

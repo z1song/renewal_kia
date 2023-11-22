@@ -1,0 +1,408 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@font-face {
+    font-family: 'YES24';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YES24.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0px solid silver;
+    font-family: 'Pretendard-Regular';
+    word-break: keep-all;
+}
+
+body {
+    color: black;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 12px;
+    background: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    color: #555;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #eee;
+    border: 1px solid #888;
+    color: black;
+}
+
+.button-primary {
+    background-color: #030f16;
+    color: white;
+}
+
+.button-level-02 {
+    background-color: #092e43;
+    color: white;
+}
+
+article img {
+    width: 20px;
+}
+
+article {
+    margin: 80px 10%;
+    border: 1px solid #ccc;
+    padding: 5%;
+}
+
+hr {
+    background-color: #ddd;
+    height: 1px;
+    border: none;
+    margin: 20px 0;
+}
+
+.h-big {
+    font-size: 2.2rem;
+    margin-top: 140px;
+}
+
+span {
+    color: #092e43;
+}
+
+.display-flex {
+    display: flex;
+}
+
+
+/* form default */
+input {
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 8px;
+    padding: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #C4C4C4;
+    padding: 12px 13px;
+    color: #aaa;
+    resize: none;
+}
+
+input[type='checkbox'] {
+    width: 8px;
+    height: 8px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background: url("images/common/icon_select_down-arrow.png") no-repeat 95% 50%;
+    background-size: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+
+/* start */
+.logins> :nth-child(1) {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.logins> :nth-child(2) {
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logins> :nth-child(5) {
+    margin: 20px 0 40px;
+}
+
+.logins> :nth-child(6) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logins> :nth-child(6)>div {
+    display: flex;
+}
+
+.logins> :nth-child(6)> div> :nth-child(2) {
+    margin: 0 3px;
+}
+
+.logins> :nth-child(6)> :nth-child(2) {
+    cursor: pointer;
+}
+
+.logins> :nth-child(8) {
+    margin: 40px 0 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logins> :nth-child(8)> button> img {
+    width: 20px;
+}
+
+
+.logins> :nth-child(9),
+.logins> :nth-child(10),
+.logins> :nth-child(11) {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logins> :nth-child(9)>img,
+.logins> :nth-child(10)>img,
+.logins> :nth-child(11)>img {
+    margin-right: 5px;
+}
+
+.logins> :nth-child(12) {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px;
+}
+
+.logins> :nth-child(12)>:nth-child(2) {
+    margin: 0 5px;
+}
+
+.logins> :nth-child(13) {
+    color: #666;
+    display: flex;
+    justify-content: center;
+}
+
+.clause input[type="checkbox"] {
+    margin-right: 2px;
+    accent-color: #092e43;
+}
+
+.clause> :nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.clause> :nth-child(3)>div>h4>span {
+    margin-left: 4px;
+}
+
+.clause> :nth-child(3)>div> :nth-child(2) {
+    margin-top: 10px;
+}
+
+.clause> :nth-child(3)> :nth-child(3)>div {
+    display: flex;
+    align-items: baseline;
+}
+
+.clause> :nth-child(3)> :nth-child(3)>div>input>label {
+    display: flex;
+    align-items: center;
+}
+
+.clause> :nth-child(3)> :nth-child(3)>div>small {
+    margin-left: 10px;
+}
+
+.clause> :nth-child(4) {
+    background-color: #eee;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.clause> :nth-child(4)::-webkit-scrollbar {
+    width: 15px;
+}
+
+.clause> :nth-child(4)::-webkit-scrollbar-thumb {
+    background: #092e43;
+    border-radius: 10px;
+    border: 1px solid #7f8589;
+}
+
+.clause> :nth-child(4)::-webkit-scrollbar-track {
+    background: #7f8589;
+    border-radius: 10px;
+}
+
+.clause> :nth-child(5) {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-info input {
+    margin: 10px 0 30px;
+}
+
+.user-info button {
+    margin-bottom: 40px;
+}
+
+.user-info select {
+    width: 25%;
+}
+
+.user-info> :nth-child(16) {
+    cursor: pointer;
+}
+
+.user-info> :nth-child(n+15):nth-child(-n+21)  {
+    margin-bottom: 10px;
+}
+
+.user-info> :nth-child(22) {
+    margin-top: 20px;
+}
+
+.user-info> :nth-child(22) {
+    margin: 10px 0 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-info> :nth-child(22)> select {
+    width: 100px;
+}
+
+.join-comp {
+    text-align: center;
+}
+
+.join-comp> :nth-child(2) {
+    margin: 20px 0 40px;
+}
+
+.join-comp> :nth-child(3)> button> a {
+    color: white;
+}
+
+.join-comp> :nth-child(3)> button> a:hover {
+    color: black;
+}
+
+.del-account {
+    text-align: center;
+}
+
+.del-account>h5 {
+    margin: 20px 0 40px;
+}
+
+.del-account>p {
+    margin-bottom: 40px;
+}
+
+.del-comp {
+    text-align: center;
+}
+
+.del-comp>img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.del-comp>h5 {
+    margin: 20px 0;
+}
+
+.del-comp>p {
+    margin-bottom: 40px;
+}
+
+.sur> p {
+    margin: 20px 0 6px;
+}
+
+.sur> select {
+    width: 100%;
+}
+
+.sur> textarea {
+    margin-bottom: 10px;
+}
+
+/* laptop start */
+@media screen and (min-width: 800px) {
+    article {
+        width: 500px;
+        margin: 100px auto;
+        padding: 50px;
+    }
+}
