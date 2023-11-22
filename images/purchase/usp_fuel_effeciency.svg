@@ -1,0 +1,15 @@
+<svg id="Fuel_Effeciency" data-name="Fuel Effeciency" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect id="area" width="40" height="40" fill="none"/>
+  <g id="그룹_4857" data-name="그룹 4857">
+    <circle id="타원_303" data-name="타원 303" cx="16" cy="16" r="16" transform="translate(4 4)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_849" data-name="선 849" y1="1.672" transform="translate(19.944 8)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_850" data-name="선 850" x1="0.572" y1="1.571" transform="translate(15.844 8.742)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_851" data-name="선 851" x1="1.075" y1="1.281" transform="translate(12.244 10.842)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_852" data-name="선 852" y1="1.281" x2="1.075" transform="translate(26.597 10.771)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_853" data-name="선 853" y1="1.571" x2="0.572" transform="translate(23.48 8.705)" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="패스_8946" data-name="패스 8946" d="M11.028,14.884,9.58,14.048h0a12,12,0,0,1,20.787-.1h0l-1.448.836" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="패스_8947" data-name="패스 8947" d="M4.625,24.154A38.833,38.833,0,0,1,17,21.165l0-.284a3,3,0,0,1,6,0l0,.284a38.811,38.811,0,0,1,12.378,2.992" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_854" data-name="선 854" y1="3.107" x2="5.111" transform="translate(22.279 15.879)" fill="none" stroke="#fff" stroke-width="1"/>
+    <circle id="타원_304" data-name="타원 304" cx="0.214" cy="0.214" r="0.214" transform="translate(19.776 20.617)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+<svg id="Maximum_Power" data-name="Maximum Power" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_3981" data-name="사각형 3981" width="40" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_5112" data-name="그룹 5112" clip-path="url(#clip-path)">
+    <g id="그룹_5111" data-name="그룹 5111">
+      <g id="그룹_5110" data-name="그룹 5110" clip-path="url(#clip-path)">
+        <g id="그룹_5109" data-name="그룹 5109" opacity="0">
+          <g id="그룹_5108" data-name="그룹 5108">
+            <g id="그룹_5107" data-name="그룹 5107" clip-path="url(#clip-path)">
+              <rect id="사각형_3978" data-name="사각형 3978" width="40" height="40" fill="#fffdfd"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="패스_8948" data-name="패스 8948" d="M3.587,22.184H6.654v3.833h4.6v5.367h6.133l2.3,2.3h9.967V27.551h3.067v2.3h4.6V9.383h-4.6v3.066H29.654V9.383H23.521V6.316" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="패스_8949" data-name="패스 8949" d="M19.688,6.316V9.383H14.321l-3.833,3.833H6.654V17.05H3.588" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_855" data-name="선 855" x2="9.967" transform="translate(16.621 6.316)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_856" data-name="선 856" y2="16.867" transform="translate(3.587 10.149)" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="패스_8950" data-name="패스 8950" d="M21.988,19.233l.767-5.367-7.667,7.667h3.833L18.155,26.9l7.666-7.667Z" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

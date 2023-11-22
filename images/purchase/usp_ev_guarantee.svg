@@ -1,0 +1,37 @@
+<svg id="EV_Excluparts" data-name="EV Excluparts" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_4014" data-name="사각형 4014" width="40" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_5194" data-name="그룹 5194">
+    <g id="그룹_5193" data-name="그룹 5193" clip-path="url(#clip-path)">
+      <g id="그룹_5192" data-name="그룹 5192" opacity="0">
+        <g id="그룹_5191" data-name="그룹 5191">
+          <g id="그룹_5190" data-name="그룹 5190" clip-path="url(#clip-path)">
+            <rect id="사각형_4005" data-name="사각형 4005" width="40" height="40" fill="#cfcdcd"/>
+            <rect id="사각형_4006" data-name="사각형 4006" width="40" height="40" fill="#cfcdcd"/>
+            <rect id="사각형_4007" data-name="사각형 4007" width="40" height="40" fill="#cfcdcd"/>
+            <g id="그룹_5189" data-name="그룹 5189">
+              <g id="그룹_5188" data-name="그룹 5188" clip-path="url(#clip-path)">
+                <g id="그룹_5187" data-name="그룹 5187" opacity="0">
+                  <g id="그룹_5186" data-name="그룹 5186">
+                    <g id="그룹_5185" data-name="그룹 5185" clip-path="url(#clip-path)">
+                      <rect id="사각형_4008" data-name="사각형 4008" width="40" height="40" fill="#cfcdcd"/>
+                      <rect id="사각형_4009" data-name="사각형 4009" width="40" height="40" fill="#cfcdcd"/>
+                      <rect id="사각형_4010" data-name="사각형 4010" width="40" height="40" fill="#cfcdcd"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <path id="패스_8957" data-name="패스 8957" d="M22.454,19.845a3.96,3.96,0,1,1-3.96-3.96A3.96,3.96,0,0,1,22.454,19.845Z" fill="none" stroke="#fff" stroke-width="1"/>
+      <path id="패스_8958" data-name="패스 8958" d="M30.031,16.133a12.145,12.145,0,0,0-.744-1.831l1.544-3.119L27.156,7.508,24.037,9.052a12.145,12.145,0,0,0-1.831-.744L21.092,5H15.9L14.783,8.308a12.072,12.072,0,0,0-1.832.744L9.833,7.508,6.157,11.183,7.7,14.3a12.348,12.348,0,0,0-.761,1.837L3.646,17.247v5.2l3.312,1.114a12.087,12.087,0,0,0,.743,1.83l-1.544,3.12,3.676,3.675,3.118-1.545a12.072,12.072,0,0,0,1.832.744L15.9,34.694h5.2l1.114-3.311a12.065,12.065,0,0,0,1.831-.745" fill="none" stroke="#fff" stroke-width="1"/>
+      <path id="패스_8959" data-name="패스 8959" d="M32.808,24.567l1.653-9.159L25.354,28.056l5.546.258-1.653,9.159,9.107-12.648Z" fill="none" stroke="#fff" stroke-width="1"/>
+    </g>
+  </g>
+  <rect id="사각형_4015" data-name="사각형 4015" width="40" height="40" fill="none"/>
+</svg>
