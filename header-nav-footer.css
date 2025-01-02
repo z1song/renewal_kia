@@ -7,7 +7,7 @@ header {
     align-items: center;
     padding: 15px 5%;
     position: fixed;
-/*     width: 100%; */
+    width: 100%;
     z-index: 200;
     top: 0;
 }
