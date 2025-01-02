@@ -1,4 +1,8 @@
 /* start */
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(4px);
